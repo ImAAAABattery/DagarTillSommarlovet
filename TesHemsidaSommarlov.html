@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sommarlov</title>
+	<style>
+		:root {
+			--title-top: 42%;
+			--days-left-top: 58%;
+		}
+
+		body {
+			background-color: #F7D3C4;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			overflow: hidden;
+		}
+		
+		h1 {
+			text-align: center;
+			color: #4D4D4D;
+			font-family: Arial, sans-serif;
+			font-size: 100px;
+			margin: 0;
+			position: absolute;
+			top: var(--title-top);
+			transform: translateY(-50%);
+			width: 100%;
+		}
+		
+		p {
+			text-align: center;
+			color: #7F7F7F;
+			font-family: Arial, sans-serif;
+			font-size: 80px;
+			margin: 0;
+			position: absolute;
+			top: var(--days-left-top);
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Dagar kvar till sommarlovet</h1>
+	<p id="daysLeft"></p>
+	<script defer src="script.js"></script>
+</body>
+</html>
