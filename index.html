@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Sommarlov</title>
+	<title>Påsklovet</title>
 	<style>
 		:root {
 			--title-top: 42%;
@@ -10,7 +10,7 @@
 		}
 
 		body {
-			background-color: #F7D3C4;
+			background-color: rgb(247, 211, 196);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -23,30 +23,68 @@
 			text-align: center;
 			color: #4D4D4D;
 			font-family: Arial, sans-serif;
-			font-size: 100px;
+			font-size: 120px;
 			margin: 0;
 			position: absolute;
 			top: var(--title-top);
-			transform: translateY(-50%);
+			transform: translateY(-160%);
 			width: 100%;
 		}
 		
 		p {
-			text-align: center;
-			color: #7F7F7F;
+  			text-align: center;
+			color: #5e5d5d;
 			font-family: Arial, sans-serif;
-			font-size: 80px;
-			margin: 0;
-			position: absolute;
-			top: var(--days-left-top);
-			transform: translateY(-50%);
-			width: 100%;
+ 			font-size: 80px;
+ 			margin: 0;
+ 			position: absolute;
+ 			top: var(--days-left-top);
+ 			transform: translateY(-150%);
+ 			width: 100%;
+ 			font-weight: bold;
 		}
-	</style>
-</head>
-<body>
-	<h1>Dagar kvar till sommarlovet</h1>
-	<p id="daysLeft"></p>
-	<script defer src="script.js"></script>
-</body>
-</html>
+
+		#daysLeft {
+ 			font-size: 80px;
+ 			color: #5e5d5d;
+ 			transform: translateY(-50%);
+ 			font-weight: bold;
+		}
+
+		#schoolDays {
+ 	 		text-align: center;
+  			color: #5e5d5d;
+  			font-family: Arial, sans-serif;
+  			font-size: 80px;
+ 			margin: 0;
+ 			position: absolute;
+ 			top: 20%;
+  			transform: translateY(500%);
+			width: 100%;
+  			font-weight: bold;
+		}
+
+		p:last-of-type {
+ 			text-align: center;
+ 			color: #5e5d5d;
+ 			font-family: Arial, sans-serif;
+ 			font-size: 80px;
+ 			margin: 0;
+ 			position: absolute;
+ 			top: 20%;
+ 			transform: translateY(600%);
+			width: 100%;
+			font-weight: bold;
+		}
+
+			</style>
+		</head>
+		<body>
+			<h1>Dagar Kvar Till Påsklovet</h1>
+			<p id="daysLeft"></p>
+			<p>Dagar Kvar</p>
+			<p id="schoolDays">Skoldagar Kvar</p>
+			<p id="schooldaysLeft"></p>
+			<script defer src="script.js"></script>
+ 		 </body>
+		</html>
