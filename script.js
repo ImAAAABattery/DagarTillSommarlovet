@@ -6,8 +6,8 @@ var daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // omvandlar millise
 
 var weekdaysLeft = 0;
 var excludedDates = [
-  new Date(2023, 3, 6), // datumet för ledighet 1
-  new Date(2023, 3, 7) // datumet för ledighet 2
+  new Date(2023, 4, 6), // datumet för ledighet 1
+  new Date(2023, 4, 7) // datumet för ledighet 2
 ];
 var currentDate = today;
 while (currentDate <= easterBreakStart) {
