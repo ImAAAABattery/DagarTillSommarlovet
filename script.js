@@ -1,25 +1,25 @@
-var today = new Date(); // skapar ett datumobjekt för dagens datum
-var easterBreakStart = new Date(2023, 4, 11); // skapar ett datumobjekt för påsklovets startdatum (11 maj 2023)
+// Sätt datumet för påsklovet
+var easterVacationDate = new Date('2023-04-11');
 
-var timeDiff = easterBreakStart.getTime() - today.getTime(); // räknar ut antalet millisekunder mellan datumen
-var daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // omvandlar millisekunderna till dagar och avrundar uppåt
+// Räkna ut antalet millisekunder mellan idag och påsklovet
+var timeDiff = easterVacationDate.getTime() - Date.now();
 
+// Räkna ut antalet dagar kvar till påsklovet
+var daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+// Räkna ut antalet vardagar kvar till påsklovet
 var weekdaysLeft = 0;
-var excludedDates = [
-  new Date(2023, 4, 6), // datumet för ledighet 1
-  new Date(2023, 4, 7) // datumet för ledighet 2
-];
-var currentDate = today;
-while (currentDate <= easterBreakStart) {
-  var dayOfWeek = currentDate.getDay();
-  var isExcludedDate = excludedDates.some(function(excludedDate) {
-    return excludedDate.getTime() === currentDate.getTime();
-  });
-  if (dayOfWeek !== 0 && dayOfWeek !== 6 && !isExcludedDate) {
+for (var i = 0; i < daysLeft; i++) {
+  var day = new Date(Date.now() + (i * 24 * 3600 * 1000)).getDay();
+  if (day >= 1 && day <= 5) {
     weekdaysLeft++;
   }
-  currentDate.setDate(currentDate.getDate() + 1);
 }
 
-document.getElementById("daysLeft").innerHTML = daysLeft; // visar antalet dagar kvar på webbsidan
-document.getElementById("schooldaysLeft").innerHTML = weekdaysLeft; // visar antalet vardagar kvar på webbsidan
+// Uppdatera texten på sidan med antalet dagar kvar och antalet vardagar kvar
+var daysElement = document.getElementById('days');
+daysElement.textContent = daysLeft;
+
+var weekdaysElement = document.getElementById('weekdays');
+weekdaysElement.textContent = weekdaysLeft;
+
