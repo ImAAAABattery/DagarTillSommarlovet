@@ -1,91 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Påsklovet</title>
-	<script defer src="script.js"></script>
-	<style>
-		:root {
-			--title-top: 42%;
-			--days-left-top: 58%;
-		}
+  <head>
+    <meta charset="UTF-8">
+    <title>Påsklovet</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 1rem;
+        text-align: center;
+        background-color: rgb(247, 211, 196);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 14rem;
+        margin-top: 0%;
+        font-family: 'Arial', sans-serif;
+        font-weight: 900;
+        color: #4D4D4D;
+      }
+      p {
+        font-size: 4rem;
+        margin-top: -20%;
+        font-family: 'Arial', sans-serif;
+        font-weight: 600;
+        color: #5e5d5d;
+      }
+      .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Arial', sans-serif;
+        font-weight: 600;
+        font-size: 4rem;
+        height: 100%;
+        margin-top: -8%;
+        color: #5e5d5d;
+      }
 
-		body {
-			background-color: rgb(247, 211, 196);
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-			overflow: hidden;
-		}
-		
-		h1 {
-			text-align: center;
-			color: #4D4D4D;
-			font-family: Arial, sans-serif;
-			font-size: 120px;
-			margin: 0;
-			position: absolute;
-			top: var(--title-top);
-			transform: translateY(-160%);
-			width: 100%;
-		}
-		
-		p {
-  			text-align: center;
-			color: #5e5d5d;
-			font-family: Arial, sans-serif;
- 			font-size: 80px;
- 			margin: 0;
- 			position: absolute;
- 			top: var(--days-left-top);
- 			transform: translateY(-150%);
- 			width: 100%;
- 			font-weight: bold;
-		}
 
-		#daysLeft {
- 			font-size: 80px;
- 			color: #5e5d5d;
- 			transform: translateY(-50%);
- 			font-weight: bold;
-		}
-
-		#schoolDays {
- 	 		text-align: center;
-  			color: #5e5d5d;
-  			font-family: Arial, sans-serif;
-  			font-size: 80px;
- 			margin: 0;
- 			position: absolute;
- 			top: 20%;
-  			transform: translateY(500%);
-			width: 100%;
-  			font-weight: bold;
-		}
-
-		p:last-of-type {
- 			text-align: center;
- 			color: #5e5d5d;
- 			font-family: Arial, sans-serif;
- 			font-size: 80px;
- 			margin: 0;
- 			position: absolute;
- 			top: 20%;
- 			transform: translateY(600%);
-			width: 100%;
-			font-weight: bold;
-		}
-
-			</style>
-		</head>
-		<body>
-			<h1>Dagar Kvar Till Påsklovet</h1>
-			<p id="daysLeft"></p>
-			<p>Dagar Kvar</p>
-			<p id="schoolDays">Skoldagar Kvar</p>
-			<p id="schooldaysLeft"></p>
-			<script defer src="script.js"></script>
- 		 </body>
-		</html>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Påsklov</h1>
+      <p>Dagar Kvar</p>
+      <p id="days" class="centered"></p>
+      <p id="schooldays" class="centered">Vardagar Kvar</p>
+      <p id="weekdays" class="centered"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
