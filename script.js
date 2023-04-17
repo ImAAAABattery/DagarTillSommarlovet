@@ -1,5 +1,5 @@
 // Sätt datumet för påsklovet
-var easterVacationDate = new Date('2023-04-11');
+var easterVacationDate = new Date('2023-06-13');
 
 // Räkna ut antalet millisekunder mellan idag och påsklovet
 var timeDiff = easterVacationDate.getTime() - Date.now();
